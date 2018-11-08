@@ -31,7 +31,7 @@
     var position = projection([-122.25, 37.47]);
 
     //Baltimore
-    var position2 = projection([39.2904, 76.6122]);
+    var position2 = projection([-76.6122, 39.2904]);
 
     var heart = svg.selectAll('text').data([0]);
     heart.enter()
@@ -40,4 +40,5 @@
         .attr('font-size', 34)
         .attr('fill', '#CE1126')
         .attr('transform', function(d) {return 'translate(' + position + ')';})
+        .attr('transform', function(d) {return 'translate(' + position2 + ')';})
 })();
